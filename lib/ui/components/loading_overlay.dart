@@ -4,6 +4,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 import 'package:weather_pro/ui/utilities/switchers.dart';
 
+// Loading screen just for looks and overall user experience
 class LoadingOverlay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

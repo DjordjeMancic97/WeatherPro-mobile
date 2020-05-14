@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 import 'package:weather_pro/models/weather.dart';
-import 'package:location/location.dart' as loc;
 import 'package:fluttertoast/fluttertoast.dart';
 
 const apikey = '211613484d85715d4a9273b49f00bc9f';
@@ -21,8 +20,8 @@ class WeatherRepository extends ChangeNotifier {
   void getWeatherByLocation([String cityName]) async {
     try {
       //check if location is enabled
-      // bool locationStatus = await Geolocator().isLocationServiceEnabled();
-      bool locationStatus = await loc.Location().serviceEnabled();
+      bool locationStatus = await Geolocator().isLocationServiceEnabled();
+      //bool locationStatus = await loc.Location().serviceEnabled();
       print(
           'Trying to get location status... Status: $locationStatus, city is $cityName');
       // get user location if no city is supplied and location is enabled

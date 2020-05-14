@@ -29,7 +29,7 @@ class _CurrentWeatherScreenState extends State<CurrentWeatherScreen> {
           fit: BoxFit.cover,
         ),
       ),
-      child: Stack(
+      child: Stack(   // Stack is used here in order to allow the LoadingOverlay to go over all other Widgets
         children: <Widget>[
           SafeArea(
             child: Column(

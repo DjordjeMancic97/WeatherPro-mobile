@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Cards for Humidity, Wind speed and Feels like which are located at the bottom of the app
 class DetailedCard extends StatelessWidget {
   final String header;
   final String text;

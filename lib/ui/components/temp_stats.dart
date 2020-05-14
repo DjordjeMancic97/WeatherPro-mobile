@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// TempStats widget is responsible for showing temperature, weather icon, weather description and city name
 class TempStats extends StatelessWidget {
   final String temp;
   final IconData weatherIcon;

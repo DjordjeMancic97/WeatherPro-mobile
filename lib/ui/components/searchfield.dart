@@ -5,12 +5,12 @@ import 'package:intl/intl.dart';
 import 'package:weather_pro/networking/weather_repository.dart';
 import 'package:weather_pro/ui/utilities/switchers.dart';
 
+
+// SearchField and Search button, search is hidden by default and shown only on button press
 class SearchField extends StatelessWidget {
   final Function onTap;
-
   final TextEditingController controller;
   final String hintText;
-
   final Widget suffixIcon;
 
   const SearchField({
