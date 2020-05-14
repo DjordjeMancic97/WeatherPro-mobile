@@ -8,7 +8,7 @@ import 'package:weather_pro/models/weather.dart';
 import 'package:location/location.dart' as loc;
 import 'package:fluttertoast/fluttertoast.dart';
 
-const apikey = '211613484d85715d4a9273b49f00bc9f';
+const apikey = 'get your own api key';
 
 class WeatherRepository extends ChangeNotifier {
   WeatherRepository() {
