@@ -17,13 +17,14 @@ class WeatherRepository extends ChangeNotifier {
   Weather _weather;
   Weather get weather => _weather;
 
+// Function can be used both for location based weather and manual search weather
   void getWeatherByLocation([String cityName]) async {
     try {
-      //check if location is enabled
+      // Check if user has enabled location
       bool locationStatus = await Geolocator().isLocationServiceEnabled();
-      //bool locationStatus = await loc.Location().serviceEnabled();
       print(
           'Trying to get location status... Status: $locationStatus, city is $cityName');
+      
       // get user location if no city is supplied and location is enabled
       if (cityName == null && locationStatus) {
         Position position = await Geolocator()
@@ -32,6 +33,7 @@ class WeatherRepository extends ChangeNotifier {
             'Checking conditions... location is $locationStatus and city is $cityName');
         List<Placemark> placemark = await Geolocator()
             .placemarkFromCoordinates(position.latitude, position.longitude);
+        
         // city name is determined by location
         cityName = placemark[0].locality;
         print('Setting cityName to: $cityName');
